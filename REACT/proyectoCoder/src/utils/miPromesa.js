@@ -7,11 +7,11 @@ let productos = [
     {id: 5, name: "zapatillas", stock: 50}
 ]
 
-export const miPromesa = (id) => {
+export function miPromesa(id) {
 
     return new Promise((resolve, reject) => {
     setTimeout(() => {
-        resolve(productos);
+        resolve(id ? productos.find(prod => prod.id === id) : productos);
     }, 2000);
 
 

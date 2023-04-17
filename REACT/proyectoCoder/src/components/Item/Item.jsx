@@ -1,7 +1,7 @@
-export const Item = ({producto}) => {
+export const Item = ({itemProducto}) => {
     return (
     <div>
-        <li>{producto.name}</li>
+        <li>{itemProducto.name}</li>
     </div>
     )
 }

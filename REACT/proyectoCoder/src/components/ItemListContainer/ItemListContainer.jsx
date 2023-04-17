@@ -1,16 +1,19 @@
 import { useEffect, useState } from 'react';
 import { miPromesa } from '../../utils/miPromesa';
-import { ItemList } from '../ItemList/itemList';
+import { ItemList } from '../ItemList/ItemList';
 
 export function ItemListContainer(prop) {
 
         const [productos, setProductos] = useState([])
     
         useEffect(() => {
-            miPromesa
-                .then((res) => setProductos(res))
-                .catch((err) => console.log(err))
-                .finally(()=>console.log("este es el final"));
+            async function getProd() {
+            let misProd = await miPromesa()
+            setProductos(misProd)
+        
+        }
+
+        getProd()
     
         }, [])
     return  <>
