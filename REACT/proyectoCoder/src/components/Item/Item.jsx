@@ -1,7 +1,8 @@
 export const Item = ({itemProducto}) => {
     return (
     <div>
-        <li>{itemProducto.name}</li>
+        <li class="bg-primary">{itemProducto.name}</li>
+        <img src={itemProducto.imagen} />
     </div>
     )
 }
