@@ -32,6 +32,8 @@ function App() {
 
         <ItemDetailContainer/>
 
+        <ItemCount/>
+
     </div>
   )
   

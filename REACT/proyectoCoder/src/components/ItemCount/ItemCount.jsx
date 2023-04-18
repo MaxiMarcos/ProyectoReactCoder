@@ -1,21 +1,29 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-export const ItemCount = () => {
+export const ItemCount = ({inicio=1, stock=5}) => {
     
     const [contador, setContador] = useState(0)
 
-    const controlContador = () => {
-        
+    
+    const controlSuma = () => {
+        if (contador < stock)
         setContador(contador + 1);
     }
 
-    
-    // FALTA AGREGAR FUNCIONALIDAD DE SUMAR Y RESTAR AL BOTON
+    const controlResta = () => {
+        if (contador > inicio)
+        setContador(contador - 1);
+    }
+
 
     return <div>
         
-                <h2>contador: {contador} </h2>
-                <button onClick={controlContador}>SUMAR</button>
+                <h5>Cargar productos: {contador} </h5>
+                <div>
+                <button onClick={controlResta}>-</button>
+                <button onClick={controlSuma}>+</button>
+                <button onClick={controlResta}>reset</button>
+                </div>
 
             </div>
 }

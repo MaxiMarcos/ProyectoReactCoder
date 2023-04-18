@@ -1,4 +1,3 @@
-import { Item } from "../Item/Item"
 
 export const ItemDetail = ({producto}) => {
     return (
@@ -7,7 +6,7 @@ export const ItemDetail = ({producto}) => {
 
             <div className="card w-25 bg-light text-dark border-primary border-4 m-auto">
 
-                <div className="d-flex w-50 h-50 m-auto">
+                <div className="d-flex w-25 h-25 m-auto">
                     <img src={producto.imagen} className="w-100 h-100"/>
                 </div>
                 <div className="card-body">

@@ -9,7 +9,7 @@ export function ItemDetailContainer(prop) {
     
         useEffect(() => {
             async function getUnProd() {
-            let miProd = await miPromesa(2)
+            let miProd = await miPromesa(3)
             setProducto(miProd)
         
         }
